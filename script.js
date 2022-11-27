@@ -16,7 +16,7 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 
 
 coding.addEventListener('click', choosing)
-football.addEventListener('click', choosing)
+
 music.addEventListener('click', choosing)
 
 function choosing (){
@@ -31,7 +31,7 @@ function choosing (){
 
 let shuffleQuestion ,currentQuestion
 
-startbutton.addEventListener('click', starting)
+startbutton.addEventListener('click', codestarting)
 
 nextbutton.addEventListener('click', () => {
     currentQuestion++
@@ -39,11 +39,9 @@ nextbutton.addEventListener('click', () => {
 })
 
 
-function starting(){
+function codestarting(){
     questionContainerElement.style.display= " block";
 
-    // nextbutton.classList.remove('hide');
-    // checkbutton.classList.remove('hide');
     startbutton.style.display= " none";
 
      shuffleQuestion = questions.sort(() => Math.random() - .5)
@@ -149,3 +147,9 @@ const questions = [{
     ]}
 
 ]
+
+
+
+
+
+
