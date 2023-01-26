@@ -1,6 +1,6 @@
-const coding= document.getElementById('coding-btn')
-// const football= document.getElementById('football-btn')
-const music = document.getElementById('music-btn')
+const football= document.getElementById('football-btn')
+
+
 
 const  frontPage =document.querySelector('.category')
 const  mainContainer=document.querySelector('.container')
@@ -12,19 +12,22 @@ const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
 
-coding.addEventListener('click', choosing)
+
+
+
+
 
 
 
 function choosing (){
-     frontPage.classList.add('hide') ;
+    frontPage.classList.add('hide') ;
     mainContainer.style.display= " block";
     
      startbutton.style.display= " block";
 
 }
-
-let shuffleQuestion, currentQuestion
+football.addEventListener('click', choosing)
+// let shuffleQuestion ,currentQuestion
 
 startbutton.addEventListener('click', codestarting)
 
@@ -39,21 +42,18 @@ function codestarting(){
 
     startbutton.style.display= " none";
 
-     shuffleQuestion = questions.sort(() => Math.random() - .5)
+     shuffleQuestion = fquestions.sort(() => Math.random() - .5)
+
+     console.log(shuffleQuestion);
      currentQuestion = 0
     nextQuestion()
 }
-
-
-
 
 nextbutton.addEventListener('click', nextQuestion)
 
 function nextQuestion(){
     resetState()
     showQuestion(shuffleQuestion[currentQuestion])
-        
-
 }
 
 function showQuestion(question){
@@ -114,37 +114,33 @@ function clearStatusClass(element){
 
 
 
-const questions = [{
-    question:'Which command will stop an infinite loop?',
+const fquestions = [{
+    question:'Which country won the world cup in 2021?',
     answer:[
-        {text:'Alt-C', correct: false},
-        {text:'Shift-C', correct :false},
-        {text:'Esc',correct : false},
-        {text:'Ctrl-C', correct : true}
+        {text:'chelsea', correct: false},
+        {text:'Real madrid', correct :false},
+        {text:'Liverpool',correct : false},
+        {text:'no world cup', correct : true}
     ]},
+
+
    {
-    question:'_____ is the process of finding errors and fixing them within a program.',
+    question:'What was the score in the Euro 2012 final?',
     answer:[
-    {text:'Compiling', correct: false},
-    {text:' Executing', correct :false},
-    {text:' Debugging', correct : true},
-    {text:' Scanning ',correct : false}
-]},
+    {text:'2-0', correct: false},
+    {text:' 3-0', correct :false},
+    {text:' 4-0', correct : true},
+    {text:' 5-0',correct : false}
+   ]},
     
    {
-    question:'A loop that never ends is referred to as a(n)_________.',
+    question:'Who won the Man of the Match award in the 2014 World Cup final?',
     answer:[
-        {text:'While loop', correct: false},
-        {text:' Infinite loop', correct :true},
-        {text:' Recursive loop', correct : false},
-        {text:' for loop ',correct : false}
+        {text:'Mario Goetze', correct: false},
+        {text:' Sergio Aguero', correct :true},
+        {text:' Lionel Messi', correct : false},
+        {text:' Bastian Schweinsteiger ',correct : false}
 
     ]}
 
 ]
-
-
-
-
-
-

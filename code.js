@@ -1,6 +1,6 @@
 const coding= document.getElementById('coding-btn')
-// const football= document.getElementById('football-btn')
-const music = document.getElementById('music-btn')
+
+
 
 const  frontPage =document.querySelector('.category')
 const  mainContainer=document.querySelector('.container')
@@ -18,7 +18,7 @@ coding.addEventListener('click', choosing)
 
 function choosing (){
      frontPage.classList.add('hide') ;
-    mainContainer.style.display= " block";
+     mainContainer.style.display= " block";
     
      startbutton.style.display= " block";
 
